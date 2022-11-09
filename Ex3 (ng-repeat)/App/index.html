@@ -3,13 +3,19 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/mystyles.css" />
 </head>
 
 <body>
+
     <div ng-controller="phoneController">
-        <p>Название: {{phone.name}}</p>
-        <p>Цена: {{phone.price}} $</p>
-        <p>Производитель: {{phone.company.name}}</p>
+        <ul>
+            <li ng-repeat="phone in phones">
+                <b>{{phone.name}}</b>
+                <p>Цена: {{phone.price}} $</p>
+                <p>Производитель: {{phone.company.name}}</p>
+            </li>
+        </ul>
     </div>
     <script src="js/lib/angular.min.js"></script>
     <script type="text/javascript">
